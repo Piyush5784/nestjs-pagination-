@@ -30,7 +30,7 @@ export class AppService {
     const currentPage = page || 1;
     let skipPage = resultPerPage * (currentPage - 1);
 
-    if (skipPage <= 0) skipPage = 1;
+    if (skipPage <= 0) skipPage = 0;
 
     const allData = await this.dataModel
       .find({})
